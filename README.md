@@ -18,7 +18,7 @@ mvn clean install
 ```
 * Build and run project.
 * Open h2 database in browser with (username: sa, password:sa)
-* Run the sql script in h2 database.
+* Run the sql script in h2 database. ([script.sql](scripts.sql))
 * Import postman collections. ([BrokerageFirmCollection.postman_collection.json](BrokerageFirmCollection.postman_collection.json))
 * Test the code and provided methods.
 
