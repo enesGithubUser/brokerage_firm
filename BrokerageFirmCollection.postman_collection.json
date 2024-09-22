@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "2a676385-1f04-46c3-8778-baebd0245b26",
+		"name": "BrokerageFirmCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "3015603"
+	},
+	"item": [
+		{
+			"name": "list",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2828/api/orders/list?customerId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2828",
+					"path": [
+						"api",
+						"orders",
+						"list"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deposit",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2828/api/orders/deposit?customerId=3&amount=125",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2828",
+					"path": [
+						"api",
+						"orders",
+						"deposit"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "3"
+						},
+						{
+							"key": "amount",
+							"value": "125"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withdraw",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2828/api/orders/withdraw?customerId=3&amount=700&iban=TR1234567890123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2828",
+					"path": [
+						"api",
+						"orders",
+						"withdraw"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "3"
+						},
+						{
+							"key": "amount",
+							"value": "700"
+						},
+						{
+							"key": "iban",
+							"value": "TR1234567890123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customerId\": 1,\n  \"assetName\": \"TRY\",\n  \"orderSide\": \"BUY\",\n  \"size\": 3,\n  \"price\": 7,\n  \"status\": \"PENDING\",\n  \"createDate\": \"2024-09-22T15:04:10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:2828/api/orders/create"
+			},
+			"response": []
+		},
+		{
+			"name": "cancel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:2828/api/orders/cancel/1"
+			},
+			"response": []
+		}
+	]
+}
