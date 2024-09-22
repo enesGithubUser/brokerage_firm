@@ -2,10 +2,10 @@
 
 # General Structure
 
-- Api has been written. 
-- Dev profile used to run spring boot project.
-- Postman collection has been added to test.
-- Sql script added.
+* Project written in Java 17.
+* Dev profile used to run Spring boot project.
+* Sql script added.
+* Postman collection added for testing.
 
 
 ## Running the application locally
